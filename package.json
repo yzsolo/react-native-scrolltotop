@@ -1,31 +1,22 @@
 {
   "name": "react-native-scrolltotop",
   "version": "0.0.1",
-  "description": "a RN component make list come back to top.",
+  "description": "a RN component make list come back to top. (一个使列表回到顶部的RN组件)",
   "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yzsolo/react-native-scrolltotop.git"
+    "url": "git+https://github.com/yzsolo/react-native-scrolltotop.git"
   },
-  "keywords": [
-    "react",
-    "react-component",
-    "react-native",
-    "ios",
-    "android"
-    "scroll",
-    "scrolltotop",
-  ],
-  "author": "Tristan Edwards <tristan.edwards@me.com> (http://tristanedwards.me)",
+  "author": "yzsolo125@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yzsolo/react-native-scrolltotop/issues"
   },
-  "homepage": "https://github.com/yzsolo/react-native-scrolltotop",
-  "dependencies": {
-    
-  }
+  "homepage": "https://github.com/yzsolo/react-native-scrolltotop#readme"
 }
