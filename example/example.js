@@ -84,7 +84,7 @@ class AresRn extends Component {
           <Text style={styles.headerText}>消息列表</Text>
         </View>
         {listView}
-        {this.state.isShowToTop?<ScrollTopView root={this} scrollname='helloworld'></ScrollTopView>:null}
+        {this.state.isShowToTop?<ScrollTopView root={this} ></ScrollTopView>:null}
       </View>
     );
   }
