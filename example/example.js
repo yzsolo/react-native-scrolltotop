@@ -22,7 +22,7 @@ import Platform from 'Platform';
 import FooterView from './components/LoadMoreRefreshView';
 
 //回到顶部组件
-import ScrollTopView from './components/ScrollToTop';
+import ScrollTopView from 'react-native-scrolltotop';
 
 class AresRn extends Component {
 
