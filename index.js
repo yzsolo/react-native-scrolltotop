@@ -6,11 +6,11 @@
 
 import React, { Component } from 'react';
 import {
- 	View,
- 	Text,
- 	Image,
- 	StyleSheet,
- 	TouchableOpacity,
+    View,
+    Text,
+    Image,
+    StyleSheet,
+    TouchableOpacity,
     Dimensions
 } from 'react-native';
 
@@ -18,13 +18,39 @@ let backToTopImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABoCAQA
 
 export default class ScrollToTop extends Component {
 
- 	render() {
- 		return (
- 			<TouchableOpacity onPress={this._onPress.bind(this)} style={styles.toTop}>
-                <Image style={{width: 60, height: 60}} source={{uri: backToTopImage}} />
+    render() {
+        return (
+            <TouchableOpacity 
+                onPress={this._onPress.bind(this)} 
+                style={[styles.toTop, {
+                    borderRadius:this.props.isRadius? this.props.bdRadius || 30 : 0,
+                    backgroundColor: this.props.bgColor?this.props.bgColor:this.props.text?'#099fde':null, 
+                    width:this.props.width || 60, 
+                    height:this.props.height || 60,
+                    left: this.props.left || Dimensions.get('window').width - 80,
+                    top: this.props.top || Dimensions.get('window').height - 160
+                }]}>
+                {this.props.text?
+                    <Text 
+                        style={{
+                            color:this.props.color || '#ffffff', 
+                            fontSize:this.props.fontSize || 12
+                        }}>
+                        {this.props.text}
+                    </Text>
+                    :
+                    <Image 
+                        style={{
+                            width: this.props.width || 60, 
+                            height: this.props.height || 60
+                        }} 
+                        source={{
+                            uri: this.props.imageUri || backToTopImage
+                        }} />
+                }
             </TouchableOpacity>
- 		);
- 	}
+        );
+    }
 
     _onPress() {
         /*
@@ -34,8 +60,12 @@ export default class ScrollToTop extends Component {
     }
 }
 
+ScrollToTop.defaultProps = {
+    isRadius: true
+}
+
 let styles = StyleSheet.create({
-	toTop: {
+    toTop: {
         flex: 1,
         position: 'absolute',
         width: 60,
@@ -43,7 +73,5 @@ let styles = StyleSheet.create({
         borderRadius: 30,
         alignItems: 'center',
         justifyContent: 'center',
-        left: (Dimensions.get('window').width - 80),
-        top: (Dimensions.get('window').height - 160),
     },
 })

@@ -1,6 +1,6 @@
 {
   "name": "react-native-scrolltotop",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "a RN component make list come back to top. (一个使列表回到顶部的RN组件)",
   "main": "index.js",
   "directories": {
