@@ -71,12 +71,16 @@ isRadius        | bool   | Yes      | true      | whether need a borderRadius of
 bdRadius        | number | Yes      | 30        | borderRadius of your button
 left            | number | Yes      | Dimensions.get('window').width - 80        | distance from the left
 top             | number | Yes      | Dimensions.get('window'.height - 160        | distance from the top
-Text||||
-color| string | Yes | '#ffffff' | color of your text
-fontSize| number | Yes | 12 | fontSize of your text
-Image||||
-width|||| same with button
-height|||| same with button
-imageUri | string | Yes | a base64 img | uri of your Image
+#### use Text
+Prop            | Type   | Optional | Default   | Description
+--------------- | ------ | -------- | --------- | -----------
+color           | string | Yes      | '#ffffff' | color of your text
+fontSize        | number | Yes      | 12        | fontSize of your text
+#### use Image
+Prop            | Type   | Optional | Default   | Description
+--------------- | ------ | -------- | --------- | -----------
+width           | number | Yes      | 60           | same with button
+height          | number | Yes      | 60           |  same with button
+imageUri        | string | Yes      | a base64 img | uri of your Image
 
 if it is useful to you, let me know or star it :smile:.
