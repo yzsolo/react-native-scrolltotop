@@ -18,7 +18,7 @@ import ScrollTopView from 'react-native-scrolltotop';
 
   //first set default state in your constructor
   constructor(props) {
-    ...
+    //...
     this.state = {
       isShowToTop: false,
     };
