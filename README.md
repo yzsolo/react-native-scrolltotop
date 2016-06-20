@@ -18,7 +18,7 @@ import ScrollTopView from 'react-native-scrolltotop';
 
   //first set default state in your constructor
   constructor(props) {
-    ...
+    //...
     this.state = {
       isShowToTop: false,
     };
@@ -83,4 +83,4 @@ width           | number | Yes      | 60           | same with button
 height          | number | Yes      | 60           |  same with button
 imageUri        | string | Yes      | a base64 img | uri of your Image
 
-if it is useful to you, let me know or star it :smile:.
+if it is useful to you, let me know :smile:.
