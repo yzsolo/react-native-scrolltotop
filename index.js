@@ -19,33 +19,35 @@ let backToTopImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABoCAQA
 export default class ScrollToTop extends Component {
 
     render() {
+        let config = this.props;
+
         return (
             <TouchableOpacity 
                 onPress={this._onPress.bind(this)} 
                 style={[styles.toTop, {
-                    borderRadius:this.props.isRadius? this.props.bdRadius : 0,
-                    backgroundColor: this.props.bgColor?this.props.bgColor:this.props.text?'#099fde':null, 
-                    width:this.props.width, 
-                    height:this.props.height,
-                    left: this.props.left,
-                    top: this.props.top
+                    borderRadius: config.isRadius? config.bdRadius : 0,
+                    backgroundColor: config.bgColor?config.bgColor:config.text?'#099fde':null, 
+                    width: config.width, 
+                    height: config.height,
+                    left: config.left,
+                    top: config.top
                 }]}>
-                {this.props.text?
+                {config.text?
                     <Text 
                         style={{
-                            color:this.props.color, 
-                            fontSize:this.props.fontSize
+                            color: config.color, 
+                            fontSize: config.fontSize
                         }}>
-                        {this.props.text}
+                        {config.text}
                     </Text>
                     :
                     <Image 
                         style={{
-                            width: this.props.width, 
-                            height: this.props.height
+                            width: config.width, 
+                            height: config.height
                         }} 
                         source={{
-                            uri: this.props.imageUri
+                            uri: config.imageUri
                         }} />
                 }
             </TouchableOpacity>
