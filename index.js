@@ -23,29 +23,29 @@ export default class ScrollToTop extends Component {
             <TouchableOpacity 
                 onPress={this._onPress.bind(this)} 
                 style={[styles.toTop, {
-                    borderRadius:this.props.isRadius? this.props.bdRadius || 30 : 0,
+                    borderRadius:this.props.isRadius? this.props.bdRadius : 0,
                     backgroundColor: this.props.bgColor?this.props.bgColor:this.props.text?'#099fde':null, 
-                    width:this.props.width || 60, 
-                    height:this.props.height || 60,
-                    left: this.props.left || Dimensions.get('window').width - 80,
-                    top: this.props.top || Dimensions.get('window').height - 160
+                    width:this.props.width, 
+                    height:this.props.height,
+                    left: this.props.left,
+                    top: this.props.top
                 }]}>
                 {this.props.text?
                     <Text 
                         style={{
-                            color:this.props.color || '#ffffff', 
-                            fontSize:this.props.fontSize || 12
+                            color:this.props.color, 
+                            fontSize:this.props.fontSize
                         }}>
                         {this.props.text}
                     </Text>
                     :
                     <Image 
                         style={{
-                            width: this.props.width || 60, 
-                            height: this.props.height || 60
+                            width: this.props.width, 
+                            height: this.props.height
                         }} 
                         source={{
-                            uri: this.props.imageUri || backToTopImage
+                            uri: this.props.imageUri
                         }} />
                 }
             </TouchableOpacity>
@@ -61,16 +61,21 @@ export default class ScrollToTop extends Component {
 }
 
 ScrollToTop.defaultProps = {
-    isRadius: true
+    isRadius: true,
+    width: 60,
+    height: 60,
+    left: Dimensions.get('window').width - 80,
+    top: Dimensions.get('window').height - 160,
+    bdRadius: 30,
+    color: '#ffffff',
+    fontSize: 12,
+    imageUri: backToTopImage
 }
 
 let styles = StyleSheet.create({
     toTop: {
         flex: 1,
         position: 'absolute',
-        width: 60,
-        height: 60,
-        borderRadius: 30,
         alignItems: 'center',
         justifyContent: 'center',
     },
