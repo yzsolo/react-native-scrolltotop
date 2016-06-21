@@ -1,5 +1,5 @@
 # react-native-scrolltotop
-a RN component make list come back to top. (一个使列表回到顶部的RN组件)
+a RN component make list come back to top. 
 
 ### IOS && ANDROID
 ![scrolltotop ios preview](http://i.imgur.com/FeNTNJw.gif)
